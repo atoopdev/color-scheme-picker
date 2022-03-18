@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="colorschemegen.css">
+    <title>Color Scheme Generator</title>
+</head>
+<div class="container">
+    <form action="#" method="post" id="color-picker-form">
+        <input type="color" id="selected-color" name="color" value="#ff0000">
+        <select id="color-scheme" name="colorScheme">
+            <option value="dark">Dark</option>
+            <option value="light">Light</option>
+        </select>
+        <button type="submit" class="btn">Get color scheme</button>
+
+
+    </form>
+    <!-- need a color picker form input type="color" -->
+    <!-- include color scheme mode light/dark drop down option-->
+    <!-- click button to make request to The Color API to get a color scheme  -->
+    <!-- will return hex values of color scheme -->
+    <!-- display scheme color and hex values on the page -->
+    <!-- see if you can click on hex value to copy to clipboard -->
+</div>
+<body>
+    <script src="colorschemegen.js"></script>
+</body>
+</html>
