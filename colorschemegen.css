@@ -4,7 +4,7 @@
 }
 
 html {
-  font-size: 1rem;
+  font-size: 0.75rem;
   font-family: "Roboto", sans-serif;
 }
 
@@ -24,12 +24,13 @@ body {
   font-weight: 300;
   background-color: #fff;
   color: #1d3557;
-  /* text-align: center; */
 }
 
 .container {
   margin: 50px auto;
-  width: 550px;
+  min-width: 340px;
+  width: 33%;
+  max-width: 550px;
   height: 550px;
   border: 1px solid black;
 }
@@ -37,13 +38,13 @@ body {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  width: 550px;
+  width: 100%;
   height: 90px;
-  border: 1px solid black;
+  /* border: 1px solid black; */
 }
 
 select {
-  width: 19.5rem;
+  width: 9.75rem;
   height: 2.625rem;
 }
 
@@ -53,9 +54,14 @@ select {
 }
 
 .btn {
-  padding: 5px 15px;
+  padding: 1em 2em;
   border: 1px solid black;
   border-radius: 4px;
+}
+
+.btn,
+select {
+  font-size: 0.75rem;
 }
 
 .colors-container {
@@ -64,30 +70,25 @@ select {
 
 .rect {
   height: 414px;
-  width: 110px;
-  border: 1px solid black;
+  width: 20%;
+  /* border: 1px solid black; */
 }
 
 #colors-id {
-  width: 550px;
+  width: 100%;
   height: 46px;
-  border: 1px solid black;
+  /* border: 1px solid black; */
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
 
-#color1 {
-}
+@media (min-width: 750px) {
+  html {
+    font-size: 1rem;
+  }
 
-#color2 {
-}
-
-#color3 {
-}
-
-#color4 {
-}
-
-#color5 {
+  .container {
+    min-width: 400px;
+  }
 }

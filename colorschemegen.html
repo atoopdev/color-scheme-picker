@@ -10,8 +10,9 @@
 </head>
 <div class="container">
     <form action="#" method="post" id="color-picker-form">
-        <input type="color" id="selected-color" name="color" value="#ff0000">
-        <select id="color-scheme" name="colorScheme">
+        <input type="color" id="selected-color" name="color" value="#ff0000" aria-label="color selector">
+        <select id="color-scheme" name="colorScheme" aria-label="color scheme mode selector">
+            <option value="" disabled selected hidden>Color scheme mode:</option>
             <option value="monochrome">monochrome</option>
             <option value="monochrome-dark">monochrome-dark</option>
             <option value="monochrome-light">monochrome-light</option>
