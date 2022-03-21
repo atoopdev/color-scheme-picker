@@ -28,6 +28,26 @@ function getColorScheme(color, mode){
             colorArray.push(data.colors[i].hex.value)
         }
         console.log(colorArray)
-
+        renderColors(colorArray)
     })
+}
+
+// --------------------------- render colors to screen ---------------------------------
+
+function renderColors(colorData){
+    let htmlColorList = ""
+document.getElementById("color1").style.backgroundColor = colorData[0]
+document.getElementById("color1").innerText=colorData[0]
+document.getElementById("color2").style.backgroundColor = colorData[1]
+document.getElementById("color2").innerText=colorData[1]
+document.getElementById("color3").style.backgroundColor = colorData[2]
+document.getElementById("color3").innerText=colorData[2]
+document.getElementById("color4").style.backgroundColor = colorData[3]
+document.getElementById("color4").innerText=colorData[3]
+document.getElementById("color5").style.backgroundColor = colorData[4]
+document.getElementById("color5").innerText=colorData[4]
+for(let i=0;i<colorData.length; i++){
+    htmlColorList += `<p>${colorData[i]}</p>`
+}
+document.getElementById("colors-id").innerHTML = htmlColorList
 }

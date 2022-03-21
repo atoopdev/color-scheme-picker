@@ -72,6 +72,9 @@ select {
   width: 550px;
   height: 46px;
   border: 1px solid black;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
 #color1 {
