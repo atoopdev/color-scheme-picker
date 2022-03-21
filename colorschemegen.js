@@ -35,19 +35,16 @@ function getColorScheme(color, mode){
 // --------------------------- render colors to screen ---------------------------------
 
 function renderColors(colorData){
+
     let htmlColorList = ""
-document.getElementById("color1").style.backgroundColor = colorData[0]
-document.getElementById("color1").innerText=colorData[0]
-document.getElementById("color2").style.backgroundColor = colorData[1]
-document.getElementById("color2").innerText=colorData[1]
-document.getElementById("color3").style.backgroundColor = colorData[2]
-document.getElementById("color3").innerText=colorData[2]
-document.getElementById("color4").style.backgroundColor = colorData[3]
-document.getElementById("color4").innerText=colorData[3]
-document.getElementById("color5").style.backgroundColor = colorData[4]
-document.getElementById("color5").innerText=colorData[4]
+
 for(let i=0;i<colorData.length; i++){
+    let id="color"+(i+1)
+    console.log("logging id: ", id);
     htmlColorList += `<p>${colorData[i]}</p>`
+    document.getElementById(id).style.backgroundColor = colorData[i]
+    // document.getElementById(id).innerText=colorData[i]
+
 }
 document.getElementById("colors-id").innerHTML = htmlColorList
 }
