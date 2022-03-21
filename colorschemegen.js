@@ -21,6 +21,13 @@ function getColorScheme(color, mode){
     .then(response => response.json())
     .then(data =>{
         console.log(data)
-        console.log("Colors: ", data.colors)
+        // console.log("Colors: ", data.colors[0].hex.value)
+        let colorArray = []
+        for(let i=0;i<data.colors.length; i++){
+            console.log("Iterate colors: ", data.colors[i].hex.value)
+            colorArray.push(data.colors[i].hex.value)
+        }
+        console.log(colorArray)
+
     })
 }
