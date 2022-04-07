@@ -7,6 +7,7 @@ formEL.addEventListener("submit", event =>{
     // console.log("Sumbit button clicked")
     const ourFormData = new FormData(event.target)
     let colorChoice = ourFormData.get("color")
+    console.log(colorChoice)
     colorChoice = colorChoice.substring(1)
     const colorSchemeChoice = ourFormData.get("colorScheme")
     // console.log(`Form color data: ${colorChoice} ${colorSchemeChoice}`) 
@@ -20,7 +21,7 @@ function getColorScheme(color, mode){
     fetch(`https://www.thecolorapi.com/scheme?hex=${color}&mode=${mode}&count=5`, {method:"GET"})
     .then(response => response.json())
     .then(data =>{
-        // console.log(data)
+        console.log(data)
         // console.log("Colors: ", data.colors[0].hex.value)
         let colorArray = []
         for(let i=0;i<data.colors.length; i++){
@@ -45,6 +46,6 @@ for(let i=0;i<colorData.length; i++){
     document.getElementById(id).style.backgroundColor = colorData[i]
     // document.getElementById(id).innerText=colorData[i]
 
-}
-document.getElementById("colors-id").innerHTML = htmlColorList
+    }
+    document.getElementById("colors-id").innerHTML = htmlColorList
 }
